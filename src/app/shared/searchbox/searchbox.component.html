@@ -1,0 +1,16 @@
+<div class="SearchWrapper">
+  <div class="SearchInside">
+    <img src="../../../assets/GIT_FIND.png" class="LogoBig" />
+    <a class="SearchDevs">
+      <span class="GitText">GIT_FIND</span>
+      <br />
+      <span class="GitTextSmaller">DESCUBRA MAIS SOBRE QUALQUER USUÁRIO NO GITHUB COM UM<br><b>UNICO CLIQUE</b></span></a>
+    <a class="SearchInputWrapper">
+      <div>
+        <input (keydown.enter)="search2()" class="SearchInput" [(ngModel)]="Search" placeholder="Usuário" />
+      </div>
+      <a class="SearchButton" [routerLink]="'/results/' + Search">Pesquisar</a>
+    </a>
+  </div>
+  <a class="AboutButton" [routerLink]="'/about/'">SOBRE ESSE WEBAPP</a>
+</div>

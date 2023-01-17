@@ -1,0 +1,164 @@
+@mixin for-size($range) {
+  $phone-upper-boundary: 600px;
+  $tablet-portrait-upper-boundary: 900px;
+  $tablet-landscape-upper-boundary: 1200px;
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) {
+      @content;
+    }
+  } @else if $range == tablet-portrait-up {
+    @media (min-width: $phone-upper-boundary) {
+      @content;
+    }
+  } @else if $range == tablet-landscape-up {
+    @media (min-width: $tablet-portrait-upper-boundary) {
+      @content;
+    }
+  } @else if $range == desktop-up {
+    @media (min-width: $tablet-landscape-upper-boundary) {
+      @content;
+    }
+  } @else if $range == big-desktop-up {
+    @media (min-width: $desktop-upper-boundary) {
+      @content;
+    }
+  }
+}
+.GitText{
+  font-weight: 300;
+font-size: 48px;
+line-height: 65px;
+margin-bottom: 24px;
+}
+.GitTextSmaller{
+  font-style: normal;
+  font-size: 24px;
+line-height: 29px;
+text-align: center;
+}
+.SearchDevs {
+  display: flex;
+  flex-direction: column;
+
+}
+.BlueText {
+  color: #0069ca;
+}
+
+.PurpleText {
+  color: #8c19d2;
+}
+.SearchWrapper {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.SearchInputWrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.SearchInput {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-family: inter;
+  font-size: 24px;
+  font-weight: lighter;
+  padding: 8px;
+  gap: 10px;
+  width: 60vw;
+  height:48px;
+  margin-bottom: 15px;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(12.5px);
+  color: #aaaaaa;
+  border: 1px solid cyan;
+  /* Note: backdrop-filter has minimal browser support */
+  border-radius: 10px;
+  transition:all 250ms;
+  @include for-size(tablet-portrait-up) {
+    width: 420px;
+  }
+}
+
+.SearchInput:hover{
+  background: black;
+  color:white;
+}
+.SearchInput:focus {
+  border-color: #8c19d2;
+  background:white;
+  color:black;
+}
+.SearchIcon {
+  position: absolute;
+  left: 0px;
+  padding-left: 8px;
+  transform: translateY(-50%);
+  top: 50%;
+  font-size: 24px;
+  color: gray;
+  height: 24px;
+  width: 24px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+.SearchButton {
+  background: linear-gradient(274.84deg, #00B2FF -19.35%, #5A09EC 112.52%);
+  background-color: #00B2FF;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  width: 176px;
+  height: 48px;
+  text-align: center;
+  font-size: 18px;
+  text-decoration: none;
+  color: white;
+  transition:all 200ms;
+}
+.SearchButton:hover{
+  background: white;
+  color:black;
+}
+.SearchInside {
+  margin: auto;
+  display:flex;
+  flex-direction: column;
+  padding: 0px;
+gap: 15px;
+align-items: center;
+}
+
+.LogoBig{
+  height: 128px;
+  width:128px;
+  align-content: center;
+
+}
+
+.AboutButton{
+  padding:16px;
+  color:white;
+  background: rgba(0, 0, 0, 0.6);
+  border: 1px solid #FFFFFF;
+  backdrop-filter: blur(8px);
+  text-decoration: none;
+  border-radius: 12px;
+  transition: all 200ms;
+}
+.AboutButton:hover{
+  background: black;
+  border-color: purple;
+}

@@ -1,0 +1,7 @@
+<div class="SearchWrapper">
+  <a [routerLink]="''" class="SearchDevs">
+    <img src="../../../assets/GIT_FIND.png" class="LogoBig" />
+  </a>
+      <input (keydown.enter)="search()" class="SearchInput" [(ngModel)]="Search" placeholder="Pesquisar" />
+    <a class="SearchButton" (click)="search()">Search</a>
+</div>
