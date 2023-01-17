@@ -1,5 +1,5 @@
 # Git_Find 2.0
-![UI](readme.png)
+![UI/Show](readmehere.png)
 
 Esse é um pequeno projeto criado pra um [desafio de vaga de desenvolvedor angular.](https://docs.google.com/document/d/1IXejML09nP0NTNW-VOGtgA_Lshrf4et8/edit?usp=sharing&ouid=111529386895483441891&rtpof=true&sd=true), e a continuação/Re-Design da [versão 1.0](https://github-info-finder-petize.web.app/results/wbond)
 
